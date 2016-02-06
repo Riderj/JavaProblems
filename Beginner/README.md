@@ -5,5 +5,6 @@ This problem set includes very basic problems, and will use simple Java concepts
 - Variables
 - Functions
 - Arrays/Lists 
+- User Input
 
 
