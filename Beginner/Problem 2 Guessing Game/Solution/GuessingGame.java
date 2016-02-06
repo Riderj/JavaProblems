@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class GuessingGame{
 	private static Scanner input = new Scanner(System.in);
-	private static final int MAX_GUESS = 50;
+	private static final int MAX_GUESS = 10;
 
 	public static void main(String[] args){
 		playGame(input);
@@ -18,7 +18,7 @@ public class GuessingGame{
 		playing = input.nextLine();
 		while(playing.equalsIgnoreCase("y")){
 			
-			System.out.println("Guess a number between 0 and "+MAX_GUESS+guessNum);
+			System.out.println("Guess a number between 0 and "+MAX_GUESS);
 			guess = input.nextInt();
 			multiplier = turns < 10 ? 1 : (turns < 20 ? 1.25 : (turns < 30 ? 1.5 : turns < 40 ? 1.75 : turns < 50 ? 2 : 2.25));
 			if(guess == guessNum || guesses > 1){
@@ -29,10 +29,10 @@ public class GuessingGame{
 					System.out.println("Guess Lower");
 					--guesses;
 				}else{
-					System.out.println("You've guessed correctly! The number was: "+guessNum);
+					System.out.println("You've guessed correctly! The number was: "+guessNum+" "+multiplier);
 					guessNum = rand.nextInt(MAX_GUESS);
 					guesses = 3;
-					totalScore += ((int)1*multiplier);
+					totalScore += 1*multiplier;
 					turns++;
 					multiplier += .25;
 				}
