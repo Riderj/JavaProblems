@@ -3,7 +3,6 @@
 This problem set includes intermediate problems, and will use more advanced Java concepts such as:
 
 - Everything in Beginner
-- Classes/Objects
 - Inheritance
 - Interfaces
 - Enums
