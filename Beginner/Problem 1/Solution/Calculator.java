@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class Calculator{
 
-	Scanner input = new Scanner(System.in);
+	static Scanner input = new Scanner(System.in);
 	public static void main(String[] args){
-		System.out.println("Ented the first number:");
+		System.out.print("Enter the first number: ");
 		int num1 = input.nextInt();
-		System.out.println("Ented the second number:");
+		System.out.print("\nEnter the second number: ");
 		int num2 = input.nextInt();
 
-		System.out.printf("Added: %d Subtracted: %d Multiplied: %d Divided: %d",add(num1,num2),subtract(num1,num2),multiply(num1,num2),divide(num1,num2));
+		System.out.printf("Added: %d\nSubtracted: %d\nMultiplied: %d\nDivided: %f",add(num1,num2),subtract(num1,num2),multiply(num1,num2),divide(num1,num2));
 	}
 
 	public static int add(int num1,int num2){
@@ -25,7 +25,7 @@ public class Calculator{
 	}
 
 	public static double divide(int num1, int num2){
-		return num1/num2;
+		return (double)num1/(double)num2;
 	}
 }
 
